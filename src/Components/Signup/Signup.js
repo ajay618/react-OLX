@@ -1,7 +1,7 @@
 import React, { useState,useContext } from 'react';
 import Logo from '../../olx-logo.png';
 import './Signup.css';
-import { FirebaseContext } from '../../store/firebaseContext';
+import { FirebaseContext } from '../../store/context';
 import { useNavigate } from 'react-router-dom';
 
 export default function Signup() {
@@ -94,7 +94,7 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        <a href="/login">Login</a>
       </div>
     </div>
   );

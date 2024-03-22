@@ -1,10 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import firebase from './firebase/config';
-import { FirebaseContext } from './store/firebaseContext';
+import { FirebaseContext } from './store/context';
+import Context from './store/context';
 
-ReactDOM.render(
-<FirebaseContext.Provider value={firebase}>
+createRoot(document.getElementById('root')).render(
+<FirebaseContext.Provider value={{firebase}}>
+<Context>
 <App />
-</FirebaseContext.Provider>, document.getElementById('root'));
+</Context>
+</FirebaseContext.Provider>
+);

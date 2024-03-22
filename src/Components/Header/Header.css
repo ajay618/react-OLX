@@ -94,9 +94,6 @@
   margin-right: 5px;
 }
 
-.language svg {
-}
-
 .span {
   text-decoration: none;
   font-size: 16px;
@@ -112,8 +109,17 @@
   height: 2px;
 }
 
+.LogOut {
+  cursor: pointer;
+}
+
+.loginText {
+  cursor: pointer;
+}
+
 .loginPage a{
   text-decoration: none;
+  
 }
 
 .sellMenu {
