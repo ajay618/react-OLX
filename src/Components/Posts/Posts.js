@@ -2,11 +2,14 @@ import React , { useState , useEffect , useContext }from 'react';
 import Heart from '../../assets/Heart';
 import './Post.css';
 import { FirebaseContext } from '../../store/context';
-
+import { PostContext } from '../../store/PostContext';
+import { useNavigate } from 'react-router-dom';
 function Posts() {
 
 const {firebase} = useContext(FirebaseContext)
 const [products , setProducts] = useState([])
+const {setpostDetails} = useContext(PostContext)
+const navigate = useNavigate();
 
 useEffect( () => {
    firebase.firestore().collection('products').get().then((snapshot) => {
@@ -30,7 +33,10 @@ useEffect( () => {
         <div className="cards">
 
       { products.map( (product) => {
-          return   <div className="card">
+          return   <div className="card" onClick={ () => {
+            setpostDetails(product);
+            navigate('/view');
+          }}>
                 <div className="favorite">
                   <Heart></Heart>
                 </div>
