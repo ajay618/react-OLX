@@ -1,14 +1,15 @@
 import React from 'react'
 
-export default  function OlxLogo() {
+export default  function OlxLogo({ onClick }) {
     return(  
           <svg
         width="48px"
         height="48px"
         viewBox="0 0 1024 1024"
         data-aut-id="icon"
-        className
+        style={{ cursor: 'pointer' }} 
         fillRule="evenodd"
+        onClick={onClick}
       >
         <path
           className="rui-77aaa"
