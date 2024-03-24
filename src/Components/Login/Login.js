@@ -18,7 +18,7 @@ function Login() {
         navigate('/')
       })
       .catch((error) => {
-        setError(error.message); // Display error message if login fails
+        setError("Wrong credentials"); // Display error message if login fails
       });
   };
 

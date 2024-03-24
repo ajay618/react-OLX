@@ -16,7 +16,7 @@ function View() {
       })
     }
   )
-  },[])
+  })
   return (
     <div className="viewParentDiv">
       <div className="imageShowDiv">
