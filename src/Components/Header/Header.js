@@ -14,11 +14,11 @@ function Header() {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext)
   const { firebase } = useContext(FirebaseContext)
-
+  
   const handleLogoClick = () => {
     navigate('/');
   };
-
+  
   return (
     <div className="headerParentDiv">
       <div className="headerChildDiv">
@@ -69,7 +69,6 @@ function Header() {
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
             <span onClick={() => {
-              console.log("SELL button clicked");
               navigate('/create');
             }}>SELL</span>
 
